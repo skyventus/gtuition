@@ -1,0 +1,45 @@
+{% load static %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'accounts/style.css' %}" />
+
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+<div class="container">
+    <div class="title">
+      <h1>Parent's Registration</h1>
+      <p>By signing up, you will have the access to the best tutor in the community of GTuition.</p>
+      <hr>
+      <h3>Basic Information</h3>
+    </div>
+</div>
+<div class="container">
+    <form action="signup" class="regForm" method="post">
+    {% csrf_token %}
+        <div>
+          <label for="name" class="labelForm">Name</label>
+          <input class="inputBox" type="text" placeholder="Your Name" name="name" required></input>
+        </div>
+        <div style="padding-top: 20px;">
+          <label for="email" class="labelForm">Email</label>
+          <input class="inputBox" type="text" placeholder="Email address" name="email" required></input>
+        </div>
+        <div style="padding-top: 20px;">
+          <label for="handphone" class="labelForm">Contact No</label>
+          <input class="inputBox" type="handphone" placeholder="Contact No." name="handphone" required></input>
+        </div>
+        <div style="padding-top: 20px;">
+          <label for="address" class="labelForm">Home Address</label>
+          <input class="inputBox" type="text" placeholder="Home Address" name="address" required></input>
+        </div>
+        <div style="padding-top: 20px;">
+          <label for="postal" class="labelForm">Postal Code</label>
+          <input class="inputBox" type="text" placeholder="Your Postal Code" name="postal" required></input>
+        </div>
+        <div style="padding-top: 20px;">
+          <p>By creating an account you agree to our <a href="#" style="color:white">Terms & Privacy</a>.</p>
+          <button type="submit" class="btn btn-primary">Next</button>
+          <button type="button" class="btn btn-danger">Back</button>
+        </div>
+    </form>
+</div>
